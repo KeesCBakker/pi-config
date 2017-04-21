@@ -8,6 +8,11 @@ fi
 #get the data for the adapter
 ADDRESS=$(ifconfig | grep -Pzo "$ADAPTER.*\n.*")
 
+if [ "$ADDRESS" = "" ]; then
+echo "Adapter '$ADDRESS' not found."
+exit 1
+fi
+
 #ip is the first line
 IP=$(echo $ADDRESS | egrep -o '([0-9]+\.?){4}' | head -n 1);
 
