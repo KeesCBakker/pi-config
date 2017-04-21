@@ -10,6 +10,9 @@ PI_ARM_VERSION=$(
   egrep 'armv[0-9]+l' -o
 );
 
+NODE_VERSION=$1
+
+if [ -z "$NODE_VERSION" ]; then
 #get latest nodejs version from node website
 #read the first version that matches the arm platform
 NODE_VERSION=$(
@@ -17,6 +20,9 @@ NODE_VERSION=$(
   egrep "{\"version\":\"v([0-9]+\.?){3}\"[^{]*\"linux-"$PI_ARM_VERSION"[^}]*lts\":\"[^\"]+\"" -o |
   head -n 1
 );
+fi
+
+echo "Node version: $NODE_VERSION"
 
 #get the version
 VERSION=$(
@@ -24,12 +30,16 @@ VERSION=$(
   egrep 'v([0-9]+\.?){3}' -o
 );
 
+echo "Version: $VERSION"
+
 #get lts version
 LTS_VERSION=$(echo $NODE_VERSION | 
   egrep '"[^"]+"$' -o | 
   egrep '[a-zA-Z]+' -o | 
   tr '[:upper:]' '[:lower:]'
 );
+
+echo "Lts version: $LTS_VERSION"
 
 # Creates directory for downloads, and downloads node
 cd /tmp/
