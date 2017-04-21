@@ -43,7 +43,13 @@ echo "Lts version: $LTS_VERSION"
 
 # Creates directory for downloads, and downloads node
 cd /tmp/
+
+echo ""
+echo "Downloading:"
 wget https://nodejs.org/dist/latest-$LTS_VERSION/node-$VERSION-linux-$PI_ARM_VERSION.tar.gz;
+
+echo ""
+echo "Installing:"
 tar -xzf node-$VERSION-linux-$PI_ARM_VERSION.tar.gz;
 
 # Remove the tar after extracing it.
@@ -75,7 +81,7 @@ sudo ln -s /opt/nodejs/bin/npm /usr/sbin/npm;
 sudo ln -s /opt/nodejs/bin/npm /sbin/npm;
 sudo ln -s /opt/nodejs/bin/npm /usr/local/bin/npm;
 
-echp ""
+echo ""
 echo "Installation ready!"
 echo ""
 
