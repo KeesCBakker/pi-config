@@ -20,7 +20,7 @@ NODE_VERSION=$(
   egrep "{\"version\":\"v([0-9]+\.?){3}\"[^{]*\"linux-"$PI_ARM_VERSION"[^}]*lts:\"[^}]*}" -o |
   head -n 1
 );
-else if [ "$NODE_VERSION" = "latest" ]; then
+elif [ "$NODE_VERSION" = "latest" ]; then
 NODE_VERSION=$(
   curl https://nodejs.org/dist/index.json | 
   egrep "{\"version\":\"v([0-9]+\.?){3}\"[^{]*\"linux-"$PI_ARM_VERSION"[^}]*}" -o |
