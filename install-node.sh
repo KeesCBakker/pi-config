@@ -54,9 +54,9 @@ echo ""
 echo "Downloading:"
 
 if [ -z "$NODE_VERSION" ]; then
-wget https://nodejs.org/dist/latest-$LTS_VERSION/node-$VERSION-linux-$PI_ARM_VERSION.tar.gz;
-else 
 wget https://nodejs.org/dist/$VERSION/node-$VERSION-linux-$PI_ARM_VERSION.tar.gz;
+else 
+wget https://nodejs.org/dist/latest-$LTS_VERSION/node-$VERSION-linux-$PI_ARM_VERSION.tar.gz;
 fi
 
 echo ""
