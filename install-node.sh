@@ -79,8 +79,8 @@ echp ""
 echo "Installation ready!"
 echo ""
 
-NV=node -v
+NV=$(node -v)
 echo "Node version: $NV"
 
-NPMV=npm -v
+NPMV=$(npm -v)
 echo "NPM version: $NPMV"
