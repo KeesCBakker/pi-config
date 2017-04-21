@@ -1,15 +1,15 @@
 #get the adapter
 ADAPTER=$1
 
-if [ "$ADAPTER" = "" ]; then
+if [ -z "$ADAPTER" ]; then
 ADAPTER=eth0
 fi
 
 #get the data for the adapter
 ADDRESS=$(ifconfig | grep -Pzo "$ADAPTER.*\n.*")
 
-if [ "$ADDRESS" = "" ]; then
-echo "Adapter '$ADDRESS' not found."
+if [ -z "$ADDRESS" ]; then
+echo "Adapter '$ADAPTER' not found."
 exit 1
 fi
 
