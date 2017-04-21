@@ -12,18 +12,24 @@ PI_ARM_VERSION=$(
 
 NODE_VERSION=$1
 
-if [ -z "$NODE_VERSION" ]; then
+if [ -z "$NODE_VERSION" ] || [ "$NODE_VERSION" = "stable" ]; then
 #get latest nodejs version from node website
 #read the first version that matches the arm platform
 NODE_VERSION=$(
   curl https://nodejs.org/dist/index.json | 
-  egrep "{\"version\":\"v([0-9]+\.?){3}\"[^{]*\"linux-"$PI_ARM_VERSION"[^}]*lts[^}]*" -o |
+  egrep "{\"version\":\"v([0-9]+\.?){3}\"[^{]*\"linux-"$PI_ARM_VERSION"[^}]*lts:\"[^}]*}" -o |
+  head -n 1
+);
+else if [ "$NODE_VERSION" = "latest" ]; then
+NODE_VERSION=$(
+  curl https://nodejs.org/dist/index.json | 
+  egrep "{\"version\":\"v([0-9]+\.?){3}\"[^{]*\"linux-"$PI_ARM_VERSION"[^}]*}" -o |
   head -n 1
 );
 else 
 NODE_VERSION=$(
   curl https://nodejs.org/dist/index.json | 
-  egrep "{\"version\":\"v$NODE_VERSION\"[^{]*\"linux-"$PI_ARM_VERSION"[^}]*lts[^}]*" -o |
+  egrep "{\"version\":\"v$NODE_VERSION\"[^{]*\"linux-"$PI_ARM_VERSION"[^}]*}" -o |
   head -n 1
 );
 fi
