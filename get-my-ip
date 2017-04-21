@@ -1,6 +1,14 @@
+#!/bin/bash
+# By Kees C. Bakker - keestalkstech.com
+# (c) 2017 / MIT 
+
+# Gets the IP details for the adapter. First parameter is the adapter.
+# If prameter is empty, eth0 will be used.
+
 #get the adapter
 ADAPTER=$1
 
+#default to eth0 adapter
 if [ -z "$ADAPTER" ]; then
 ADAPTER=eth0
 fi
@@ -8,6 +16,7 @@ fi
 #get the data for the adapter
 ADDRESS=$(ifconfig | grep -Pzo "$ADAPTER.*\n.*")
 
+#check not found
 if [ -z "$ADDRESS" ]; then
 echo "Adapter '$ADAPTER' not found."
 exit 1
