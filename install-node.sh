@@ -20,6 +20,12 @@ NODE_VERSION=$(
   egrep "{\"version\":\"v([0-9]+\.?){3}\"[^{]*\"linux-"$PI_ARM_VERSION"[^}]*lts[^}]*" -o |
   head -n 1
 );
+else 
+NODE_VERSION=$(
+  curl https://nodejs.org/dist/index.json | 
+  egrep "{\"version\":\"v$NODE_VERSION\"[^{]*\"linux-"$PI_ARM_VERSION"[^}]*lts[^}]*" -o |
+  head -n 1
+);
 fi
 
 echo "Node version: $NODE_VERSION"
