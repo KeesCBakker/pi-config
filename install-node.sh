@@ -75,6 +75,10 @@ sudo ln -s /opt/nodejs/bin/npm /usr/sbin/npm;
 sudo ln -s /opt/nodejs/bin/npm /sbin/npm;
 sudo ln -s /opt/nodejs/bin/npm /usr/local/bin/npm;
 
+echp ""
+echo "Installation ready!"
+echo ""
+
 NV=node -v
 echo "Node version: $NV"
 
