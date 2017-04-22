@@ -17,7 +17,7 @@ if [ -z "$NODE_VERSION" ] || [ "$NODE_VERSION" = "stable" ]; then
 #read the first version that matches the arm platform
 NODE_VERSION=$(
   curl https://nodejs.org/dist/index.json | 
-  egrep "{\"version\":\"v([0-9]+\.?){3}\"[^{]*\"linux-"$PI_ARM_VERSION"[^}]*lts:\"[^}]*}" -o |
+  egrep "{\"version\":\"v([0-9]+\.?){3}\"[^{]*\"linux-"$PI_ARM_VERSION"[^}]*lts\":\"[^}]*}" -o |
   head -n 1
 );
 elif [ "$NODE_VERSION" = "latest" ]; then
