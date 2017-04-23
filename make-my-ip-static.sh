@@ -27,12 +27,12 @@ fi
 ADDRESS=$(
 	ip addr show $INTERFACE | 
 	egrep -o '([0-9]+\.?){4}/[0-9]+'
-)
+) > /dev/null
 
 #check not found
 if [ -z "$ADDRESS" ]; then
 	echo ""
-	echo -e "Adapter ${W}$ADAPTER${R} not found or not connected."
+	echo -e "Adapter ${W}$INTERFACE${R} not found or not connected."
 	echo ""
 	exit 1
 fi
