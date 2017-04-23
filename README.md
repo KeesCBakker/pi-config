@@ -8,7 +8,7 @@ $ curl -s https://raw.githubusercontent.com/KeesCBakker/pi-config/master/make-my
 ```
 It takes the adapter name as input. Try `wlan0`.
 ```
-$ curl -s https://raw.githubusercontent.com/KeesCBakker/pi-config/master/get-my-ip.sh | bash -s {adapter-name}
+$ curl -s https://raw.githubusercontent.com/KeesCBakker/pi-config/master/make-my-ip-static.sh | bash -s {adapter-name}
 ```
 
 ## 1.1 Install node js
