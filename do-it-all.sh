@@ -25,6 +25,5 @@ bash -s wlan0
 
 #install node JS
 echo -e "${W}Installing latest stable version of NodeJS.${R}" 
-$ curl -s https://raw.githubusercontent.com/KeesCBakker/pi-config/master/install-node.sh | 
+curl -s https://raw.githubusercontent.com/KeesCBakker/pi-config/master/install-node.sh | 
 bash -s stable
-
