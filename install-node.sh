@@ -101,9 +101,9 @@ echo ""
 echo -e "${W}Downloading${R}..."
 
 if [ -z "$LTS_VERSION" ]; then
-	wget -O https://nodejs.org/dist/$VERSION/node-$VERSION-linux-$PI_ARM_VERSION.tar.gz;
+	wget -q https://nodejs.org/dist/$VERSION/node-$VERSION-linux-$PI_ARM_VERSION.tar.gz;
 else 
-	wget -O https://nodejs.org/dist/latest-$LTS_VERSION/node-$VERSION-linux-$PI_ARM_VERSION.tar.gz;
+	wget -q https://nodejs.org/dist/latest-$LTS_VERSION/node-$VERSION-linux-$PI_ARM_VERSION.tar.gz;
 fi
 
 echo -e "${W}Installing${R}..."
