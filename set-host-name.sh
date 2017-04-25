@@ -14,11 +14,13 @@ W='\033[1;37m';
 G='\033[1;92m';
 R='\033[0m' # No Color;
 
+set -e;
+
 HOSTNAME=$1;
 
 if [ -z "$HOSTNAME" ]; then
-	echo -e "Please enter a new host name: ${W}";
-	read HOSTNAME;
+	HOSTNAME=$(hostname)
+	HOSTNAME=$(whiptail --inputbox "\nThe current hostname is $HOSTNAME.\n\nPlease enter the new host name." 8 78 $HOSTNAME --title "New hostname" 3>&1 1>&2 2>&3)
 fi
 
 #add to hostnname
