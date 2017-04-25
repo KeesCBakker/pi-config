@@ -20,7 +20,7 @@ HOSTNAME=$1;
 
 if [ -z "$HOSTNAME" ]; then
 	HOSTNAME=$(hostname)
-	HOSTNAME=$(whiptail --inputbox "\nThe current hostname is $HOSTNAME.\n\nPlease enter the new host name." 8 78 $HOSTNAME --title "New hostname" 3>&1 1>&2 2>&3)
+	HOSTNAME=$(whiptail --inputbox "\nThe current hostname is $HOSTNAME.\n\nPlease enter the new host name." 13 30 $HOSTNAME --title "New hostname" 3>&1 1>&2 2>&3)
 fi
 
 #add to hostnname
