@@ -4,6 +4,8 @@
 # Configures your Pi will all the parts of the 'pi-config' project.
 # Tested with RPi1/armv6l and RPi3/armv7l.
 
+# 1st parameter is host name
+
 # Source: https://github.com/KeesCBakker/pi-config/blob/master/do-it-all.sh
 
 set -e;
@@ -25,7 +27,7 @@ echo -e "${W}Setting static IP to wlan0.${R}"
 curl -s https://raw.githubusercontent.com/KeesCBakker/pi-config/master/make-my-ip-static.sh | 
 bash -s wlan0
 
-#set static IP for wlan0
+#set host name - take param 1
 HOSTNAME=$1
 echo -e "${W}Setting host name.${R}" 
 curl -s https://raw.githubusercontent.com/KeesCBakker/pi-config/master/set-host-name.sh | 
