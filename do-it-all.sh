@@ -6,6 +6,8 @@
 
 # Source: https://github.com/KeesCBakker/pi-config/blob/master/do-it-all.sh
 
+set -e;
+
 # colors
 W='\033[1;33m'
 G='\033[1;92m'
@@ -22,6 +24,12 @@ bash -s eth0
 echo -e "${W}Setting static IP to wlan0.${R}" 
 curl -s https://raw.githubusercontent.com/KeesCBakker/pi-config/master/make-my-ip-static.sh | 
 bash -s wlan0
+
+#set static IP for wlan0
+HOSTNAME=$1
+echo -e "${W}Setting host name.${R}" 
+curl -s https://raw.githubusercontent.com/KeesCBakker/pi-config/master/set-host-name.sh | 
+bash -s $HOSTNAME
 
 #install node JS
 echo -e "${W}Installing latest stable version of NodeJS.${R}" 
