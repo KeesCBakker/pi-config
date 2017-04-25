@@ -8,8 +8,6 @@
 
 # Source: https://github.com/KeesCBakker/pi-config/blob/master/do-it-all.sh
 
-set -e;
-
 # colors
 W='\033[1;33m'
 G='\033[1;92m'
