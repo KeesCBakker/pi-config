@@ -1,0 +1,18 @@
+{
+	"cpuTopic": "/{name}/cpu",
+	"memoryTopic": "/{name}/memory",
+	"cpuSampleTimeInMs": 2000,
+	"intervalInMs": 5000,
+	"verbose": true,
+	"mqtt": {
+		"port": 1883,
+		"username": "",
+		"password": "",
+		"url": "tcp://{ip}"
+	},
+	"winston": {
+		"colorize": true,
+		"console": true,
+		"level": "silly"
+	}
+}

@@ -1,0 +1,21 @@
+{
+  "name": "monitor-health",
+  "version": "0.0.1",
+  "description": "MonitorHealth",
+  "main": "app.js",
+  "author": "Kees C. Bakker (KeesTalksTech",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "health",
+    "monitor",
+    "mqtt",
+    "raspberry",
+    "pi"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "health-app-base": "0.0.2"
+  }
+}
