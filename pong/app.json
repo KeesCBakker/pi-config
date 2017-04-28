@@ -1,0 +1,15 @@
+{
+	"intervalInMs": 60000,
+	"verbose": true,
+	"mqtt": {
+		"port": 1883,
+		"username": "",
+		"password": "",
+		"url": "tcp://[ip]"
+	},
+	"winston": {
+		"colorize": true,
+		"console": true,
+		"level": "silly"
+	}
+}

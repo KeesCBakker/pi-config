@@ -1,7 +1,7 @@
 {
-  "name": "monitor-health",
+  "name": "monitor-network",
   "version": "0.0.1",
-  "description": "MonitorHealth",
+  "description": "MonitorNetwork",
   "main": "app.js",
   "author": "Kees C. Bakker (KeesTalksTech",
   "scripts": {
@@ -16,6 +16,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "health-app-base": "0.0.4"
+    "pong-app-base": "0.0.5"
   }
 }
