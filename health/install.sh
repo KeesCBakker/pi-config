@@ -12,7 +12,7 @@ R='\033[0m' # No Color
 #ensure app directory
 APPDIRECTORY=~/app/health
 if [ ! -d "$APPDIRECTORY" ]; then
-	mkdir APPDIRECTORY;
+	mkdir $APPDIRECTORY;
 fi
 
 #goto app directory
