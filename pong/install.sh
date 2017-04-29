@@ -19,7 +19,7 @@ R='\033[0m' # No Color
 NAME=$1
 IP=$2
 
-if [ -z "$NAME" ] || [ -z "$IP" ]; then
+if [ -z "$IP" ]; then
 	echo ''
 	echo 'Invalid syntax. Use: '
 	echo ''
