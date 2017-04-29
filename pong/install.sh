@@ -16,8 +16,7 @@ G='\033[1;92m'
 R='\033[0m' # No Color
 
 #get the input
-NAME=$1
-IP=$2
+IP=$1
 
 if [ -z "$IP" ]; then
 	echo ''
