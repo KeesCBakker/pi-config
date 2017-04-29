@@ -29,7 +29,7 @@ if [ -z "$NAME" ] || [ -z "$IP" ]; then
 fi
 
 #base url
-BASE=https://raw.githubusercontent.com/KeesCBakker/pi-config/master/health
+BASE=https://raw.githubusercontent.com/KeesCBakker/pi-config/master/pong
 
 #ensure app directory
 APPDIRECTORY=~/app/pong
